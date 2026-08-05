@@ -61,6 +61,19 @@ main {
     align-items: center;
 }
 
+section {
+    max-width: 80rch;
+}
+
+h3 {
+   margin-top: 0;
+}
+
+#framing-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 aside {
     visibility: hidden;
     flex: 1;
@@ -129,9 +142,4 @@ footer {
 /* compact breakpoint : phone in portrait */
 @media (width < 600px) {
 
-}
-#framing-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
