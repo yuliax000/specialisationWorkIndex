@@ -130,3 +130,8 @@ footer {
 @media (width < 600px) {
 
 }
+#framing-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
