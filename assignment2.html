@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Yulia's Assignment 2</title>
+
+  <link rel="icon" type="image/png" href="./assets/icons/cat.png">
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+<header>
+<h1>Parallel Prototypes</h1>
+</header>
+
+<div class="mainNavContainer">
+  <nav>
+    <a href="./index.html">HomePage</a>
+    <a href="./assignment1.html">Assignment 1</a>
+  </nav>
+</div>
+
+<main>
+ <section id="overview-section">
+   <p></p>
+
+ </section>
+
+  <section id="prototype-section">
+    <h2>Parallel Prototypes</h2>
+    <div id="soundExperiment">
+      <h3>Sound Characterization Experiments</h3>
+        <p>My first area of exploration focuses on the sound characterization of the instrument. In my first assignment, I proposed creating a musical experience without negative feedback, where toddlers can freely experiment without producing obviously “wrong” results. While controlling random pitches can help maintain harmony, the timbre and behavior of the sounds are also important in shaping the overall experience.</p>
+
+        <p>I am particularly concerned with playfulness, sustainability and harmony. The sounds should be enjoyable enough to encourage repeated interaction, while remaining pleasant during longer periods of play. As users can continuously generate and layer sounds, I also want to explore how different sound characteristics influence the resulting harmony and overall experience.</p>
+
+        <p>For this experiment, I developed four prototypes exploring different timbres, note lengths, effects and harmonic structures. These include a simple dry sound, a keyboard-style timbre, a sound with longer envelope release and reverb, and a piano-based chord system. By comparing these approaches, I aim to understand which sound character best supports repeated exploration while maintaining a playful and harmonious experience.</p>
+
+        <h4><a href="https://yulia-soundtest1.github.io/Yuliasoundtestone/">Prototype 1: Simple Dry Sound</a></h4>
+        <p>The first prototype uses a simple dry sound, with a sine oscillator as the basic timbre and no reverb. A sine wave has a simple sound structure without complex harmonics, providing relatively clean and direct auditory feedback. I chose it as the first prototype to establish a baseline for comparison with later versions using different timbres, effects and harmonic structures.</p>
+
+        <details>
+            <summary>Commit log for soundTest1</summary>
+            <table>
+
+                <thead><tr>
+
+                    <th>Author</th>
+                    <th>Date</th>
+                    <th>Subject</th>
+                    <th>Body</th>
+
+                </tr></thead>
+
+                <tbody>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Jul 29 15:17:33 2026 +1000</td>
+                    <td> adding the first button</td>
+                    <td>create new html, css and javascript document. Import Tone.js,  add function to play a note and link it to the sound check button</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 14:49:34 2026 +1000</td>
+                    <td>add a modal and button</td>
+                    <td>add a modal and button at the start of website</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 14:56:32 2026 +1000</td>
+                    <td>run toneInit</td>
+                    <td>add a function called toneInit,  to run it after dialog closed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 15:55:33 2026 +1000</td>
+                    <td>we added design system css</td>
+                    <td>set up some variables for color and applied style to dialog box</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Thu Aug 13 13:53:53 2026 +1000</td>
+                    <td>change color</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 16:34:33 2026 +1000</td>
+                    <td>divide the sections and add container</td>
+                    <td>I add weather container and drum container to the page.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 17:30:50 2026 +1000</td>
+                    <td>add id to all sections</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 19:29:17 2026 +1000</td>
+                    <td>bind click events to these sections</td>
+                    <td>I bound click events to some sample notes to these sections</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 14:00:31 2026 +1000</td>
+                    <td>add click events</td>
+                    <td>I add basic click events to sections</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 15:20:46 2026 +1000</td>
+                    <td>add emoji visual effects</td>
+                    <td>I add some basic emoji falling animation to each event listener.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 15:40:05 2026 +1000</td>
+                    <td>random pitch and drum setting</td>
+                    <td>I add random pitch to each section and add drum sound after animation end to pretend it crashed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 12:00:29 2026 +1000</td>
+                    <td>add some animation for hitting drum</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:24:09 2026 +1000</td>
+                    <td>test branch change</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:30:32 2026 +1000</td>
+                    <td>change note length</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:47:23 2026 +1000</td>
+                    <td>only add oscillator</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 15:49:12 2026 +1000</td>
+                    <td>adjust drum sound</td>
+                    <td>I adjust the drum sound</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 16:05:14 2026 +1000</td>
+                    <td>wear headphones</td>
+                    <td>I add "Please wear headphones for the best experience" to intro</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 16:26:33 2026 +1000</td>
+                    <td>change icon</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 21:03:58 2026 +1000</td>
+                    <td>change thunder timbre</td>
+                    <td></td>
+
+                </tr>
+
+                </tbody>
+
+            </table>
+        </details>
+
+
+        <h4><a href="https://yulia-soundtest2.github.io/Yuliasoundtest2/">Prototype 2: keyboard-like timbre</a></h4>
+        <p>The second prototype uses an oscillator and envelope to simulate a keyboard-like timbre. Compared with the simple and pure sine wave used in the first prototype, this sound has a richer character and is closer to the sound of a traditional instrument. I included this prototype to test whether changing the timbre alone, without significantly changing the sound-generation logic, could make the instrument more interesting and playful, and encourage children to interact with it repeatedly.</p>
+
+        <details>
+            <summary>commit log for soundTest2</summary>
+            <table>
+
+                <thead><tr>
+
+                    <th>Author</th>
+                    <th>Date</th>
+                    <th>Subject</th>
+                    <th>Body</th>
+
+                </tr></thead>
+
+                <tbody>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Jul 29 15:17:33 2026 +1000</td>
+                    <td> adding the first button</td>
+                    <td>create new html, css and javascript document. Import Tone.js,  add function to play a note and link it to the sound check button</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 14:49:34 2026 +1000</td>
+                    <td>add a modal and button</td>
+                    <td>add a modal and button at the start of website</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 14:56:32 2026 +1000</td>
+                    <td>run toneInit</td>
+                    <td>add a function called toneInit,  to run it after dialog closed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 15:55:33 2026 +1000</td>
+                    <td>we added design system css</td>
+                    <td>set up some variables for color and applied style to dialog box</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Thu Aug 13 13:53:53 2026 +1000</td>
+                    <td>change color</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 16:34:33 2026 +1000</td>
+                    <td>divide the sections and add container</td>
+                    <td>I add weather container and drum container to the page.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 17:30:50 2026 +1000</td>
+                    <td>add id to all sections</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 19:29:17 2026 +1000</td>
+                    <td>bind click events to these sections</td>
+                    <td>I bound click events to some sample notes to these sections</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 14:00:31 2026 +1000</td>
+                    <td>add click events</td>
+                    <td>I add basic click events to sections</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 15:20:46 2026 +1000</td>
+                    <td>add emoji visual effects</td>
+                    <td>I add some basic emoji falling animation to each event listener.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 15:40:05 2026 +1000</td>
+                    <td>random pitch and drum setting</td>
+                    <td>I add random pitch to each section and add drum sound after animation end to pretend it crashed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 12:00:29 2026 +1000</td>
+                    <td>add some animation for hitting drum</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:24:09 2026 +1000</td>
+                    <td>test branch change</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:30:32 2026 +1000</td>
+                    <td>change note length</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 14:09:50 2026 +1000</td>
+                    <td>commit_history</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 14:22:50 2026 +1000</td>
+                    <td>adjust the timbre</td>
+                    <td>I adjust the timbre to keyboard-like by setting the oscillator and envelope to different parameters</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 15:58:04 2026 +1000</td>
+                    <td>adjust drum</td>
+                    <td>drum timbre adjustment</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 16:03:57 2026 +1000</td>
+                    <td>modify the introdialog</td>
+                    <td>I add " Wear headphones for the best experience鈥?to intro</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 16:05:59 2026 +1000</td>
+                    <td>add please</td>
+                    <td>Add word "please"</td>
+
+                </tr>
+
+                </tbody>
+
+            </table>
+        </details>
+
+
+        <h4><a href="https://yulia-soundtest3.github.io/Yuliasoundtest3/">Prototype 3: reverb and long release</a></h4>
+        <p>The third prototype uses a longer envelope release and reverb, allowing each note to last longer and naturally overlap with subsequent notes. I designed this version to test whether the extended and spatial sound could create a more comfortable playing experience, better connect the sound with the weather theme, and allow continuous interaction to gradually build a more complete and immersive musical soundscape. It also tests whether the sound can remain clear and pleasant when multiple notes overlap.</p>
+
+        <details>
+            <summary>commit log for soundTest3</summary>
+            <table>
+
+                <thead><tr>
+
+                    <th>Author</th>
+                    <th>Date</th>
+                    <th>Subject</th>
+                    <th>Body</th>
+
+                </tr></thead>
+
+                <tbody>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Jul 29 15:17:33 2026 +1000</td>
+                    <td> adding the first button</td>
+                    <td>create new html, css and javascript document. Import Tone.js,  add function to play a note and link it to the sound check button</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 14:49:34 2026 +1000</td>
+                    <td>add a modal and button</td>
+                    <td>add a modal and button at the start of website</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 14:56:32 2026 +1000</td>
+                    <td>run toneInit</td>
+                    <td>add a function called toneInit,  to run it after dialog closed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 15:55:33 2026 +1000</td>
+                    <td>we added design system css</td>
+                    <td>set up some variables for color and applied style to dialog box</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Thu Aug 13 13:53:53 2026 +1000</td>
+                    <td>change color</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 16:34:33 2026 +1000</td>
+                    <td>divide the sections and add container</td>
+                    <td>I add weather container and drum container to the page.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 17:30:50 2026 +1000</td>
+                    <td>add id to all sections</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 19:29:17 2026 +1000</td>
+                    <td>bind click events to these sections</td>
+                    <td>I bound click events to some sample notes to these sections</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 14:00:31 2026 +1000</td>
+                    <td>add click events</td>
+                    <td>I add basic click events to sections</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 15:20:46 2026 +1000</td>
+                    <td>add emoji visual effects</td>
+                    <td>I add some basic emoji falling animation to each event listener.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 15:40:05 2026 +1000</td>
+                    <td>random pitch and drum setting</td>
+                    <td>I add random pitch to each section and add drum sound after animation end to pretend it crashed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 12:00:29 2026 +1000</td>
+                    <td>add some animation for hitting drum</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:29:23 2026 +1000</td>
+                    <td>add reverb and change note length</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:38:18 2026 +1000</td>
+                    <td>add envelope and oscillator</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:55:00 2026 +1000</td>
+                    <td>change different attribute</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Sep 9 13:45:01 2026 +1000</td>
+                    <td>synth change</td>
+                    <td>I connect synth to another node to make drum sound</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 16:01:38 2026 +1000</td>
+                    <td>adjust drum sound</td>
+                    <td>adjust drum sound</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 16:07:05 2026 +1000</td>
+                    <td>Add headphone notice</td>
+                    <td>I add "<p>Please wear headphones for the best experience</p>"</td>
+
+                </tr>
+
+                </tbody>
+
+            </table>
+        </details>
+
+
+
+
+        <h4><a href="https://yulia-soundtest4.github.io/Yuliasoundtest4/">Prototype 4: keyboard-like chords</a></h4>
+        <p>The fourth prototype uses piano-based chords. Instead of generating a single random note for each interaction, it directly triggers chords made up of multiple notes. I included this version to explore whether pre-built harmony could provide richer and more pleasant musical feedback. I also wanted to compare system-generated harmony with harmony created by gradually layering individual random notes, and explore which approach better supports the project's focus on exploration and open-ended play.</p>
+
+        <details>
+            <summary>commit log for soundTest4</summary>
+            <table>
+
+                <thead><tr>
+
+                    <th>Author</th>
+                    <th>Date</th>
+                    <th>Subject</th>
+                    <th>Body</th>
+
+                </tr></thead>
+
+                <tbody>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Jul 29 15:17:33 2026 +1000</td>
+                    <td> adding the first button</td>
+                    <td>create new html, css and javascript document. Import Tone.js,  add function to play a note and link it to the sound check button</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 14:49:34 2026 +1000</td>
+                    <td>add a modal and button</td>
+                    <td>add a modal and button at the start of website</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 14:56:32 2026 +1000</td>
+                    <td>run toneInit</td>
+                    <td>add a function called toneInit,  to run it after dialog closed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 15:55:33 2026 +1000</td>
+                    <td>we added design system css</td>
+                    <td>set up some variables for color and applied style to dialog box</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Thu Aug 13 13:53:53 2026 +1000</td>
+                    <td>change color</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 16:34:33 2026 +1000</td>
+                    <td>divide the sections and add container</td>
+                    <td>I add weather container and drum container to the page.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 17:30:50 2026 +1000</td>
+                    <td>add id to all sections</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 19:29:17 2026 +1000</td>
+                    <td>bind click events to these sections</td>
+                    <td>I bound click events to some sample notes to these sections</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 14:00:31 2026 +1000</td>
+                    <td>add click events</td>
+                    <td>I add basic click events to sections</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 15:20:46 2026 +1000</td>
+                    <td>add emoji visual effects</td>
+                    <td>I add some basic emoji falling animation to each event listener.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 15:40:05 2026 +1000</td>
+                    <td>random pitch and drum setting</td>
+                    <td>I add random pitch to each section and add drum sound after animation end to pretend it crashed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 12:00:29 2026 +1000</td>
+                    <td>add some animation for hitting drum</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:29:23 2026 +1000</td>
+                    <td>add reverb and change note length</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:38:18 2026 +1000</td>
+                    <td>add envelope and oscillator</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:55:00 2026 +1000</td>
+                    <td>change different attribute</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Sep 9 13:45:01 2026 +1000</td>
+                    <td>synth change</td>
+                    <td>I connect synth to another node to make drum sound</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 14:52:51 2026 +1000</td>
+                    <td>change notes to chords</td>
+                    <td>I change the notes to chords and use the piano-like timbre.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 14:54:18 2026 +1000</td>
+                    <td>enable drum notes</td>
+                    <td>I forget to enable drum notes last time</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 15:59:21 2026 +1000</td>
+                    <td>adjust drum</td>
+                    <td>adjust drum sound</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 16:08:20 2026 +1000</td>
+                    <td>add notice</td>
+                    <td>I add "Please wear headphones for the best experience"</td>
+
+                </tr>
+
+                </tbody>
+
+            </table>
+
+
+        </details>
+
+
+
+
+    <h3>Mapping Prototypes</h3>
+        <p>In the second experiment, I want to explore how user actions are mapped to auditory feedback, and whether users expect to have more direct control over the sound. Triggering music and percussion at different stages of the interaction may create different cause-and-effect relationships and affect the overall playing experience.</p>
+        <p>In particular, I want to test whether delayed feedback is intuitive and easy to understand. Immediate auditory feedback is generally more intuitive, as users can quickly recognize the connection between their actions and the resulting sounds. However, in my original instrument proposal, some sounds are not triggered immediately but only when the falling icons reach the ground. Although this delay reduces direct control, it may create a more natural connection between the visual animation and the sound.</p>
+        <p>Through this experiment, I want to explore whether users prefer direct control over the music and rhythm, or are comfortable with some delayed, random and emergent feedback, allowing sounds to occur naturally through visual events. This will help me find an appropriate balance between direct control and open-ended exploration.</p>
+
+
+        <h4><a href="https://yulia-mappingtest1.github.io/Yuliamappingtest1/">Prototype 1: drum by click</a></h4>
+        <p>In the first prototype, I use a simple click interaction to directly trigger the drum sound, using it as a baseline for the mapping experiment. This version turns the instrument into a common “click-to-sound” interaction with a different visual layout. Each user action receives immediate auditory feedback, making the mapping between interaction and sound direct and easy to understand. I designed this prototype as a comparison with later versions that use delayed feedback and more indirect methods of triggering sound.
+        </p>
+
+        <details>
+            <summary>
+                commit log for mappingTest1
+            </summary>
+            <table>
+
+                <thead><tr>
+
+                    <th>Author</th>
+                    <th>Date</th>
+                    <th>Subject</th>
+                    <th>Body</th>
+
+                </tr></thead>
+
+                <tbody>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Jul 29 15:17:33 2026 +1000</td>
+                    <td> adding the first button</td>
+                    <td>create new html, css and javascript document. Import Tone.js,  add function to play a note and link it to the sound check button</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 14:49:34 2026 +1000</td>
+                    <td>add a modal and button</td>
+                    <td>add a modal and button at the start of website</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 14:56:32 2026 +1000</td>
+                    <td>run toneInit</td>
+                    <td>add a function called toneInit,  to run it after dialog closed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 15:55:33 2026 +1000</td>
+                    <td>we added design system css</td>
+                    <td>set up some variables for color and applied style to dialog box</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Thu Aug 13 13:53:53 2026 +1000</td>
+                    <td>change color</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 16:34:33 2026 +1000</td>
+                    <td>divide the sections and add container</td>
+                    <td>I add weather container and drum container to the page.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 17:30:50 2026 +1000</td>
+                    <td>add id to all sections</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 19:29:17 2026 +1000</td>
+                    <td>bind click events to these sections</td>
+                    <td>I bound click events to some sample notes to these sections</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 14:00:31 2026 +1000</td>
+                    <td>add click events</td>
+                    <td>I add basic click events to sections</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 15:20:46 2026 +1000</td>
+                    <td>add emoji visual effects</td>
+                    <td>I add some basic emoji falling animation to each event listener.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 15:40:05 2026 +1000</td>
+                    <td>random pitch and drum setting</td>
+                    <td>I add random pitch to each section and add drum sound after animation end to pretend it crashed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 12:00:29 2026 +1000</td>
+                    <td>add some animation for hitting drum</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:24:09 2026 +1000</td>
+                    <td>test branch change</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:30:32 2026 +1000</td>
+                    <td>change note length</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:47:23 2026 +1000</td>
+                    <td>only add oscillator</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 16:35:38 2026 +1000</td>
+                    <td>adding position to drum section</td>
+                    <td>preparing for the implementation of emoji in drum area</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 16:37:58 2026 +1000</td>
+                    <td>adding emoji to drum</td>
+                    <td>I add emoji to drum and cancel the part of playing drum sound after animation ends</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 16:39:00 2026 +1000</td>
+                    <td>change the drum timbre</td>
+                    <td>I added a drum synth but forgot to use it.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 15:55:21 2026 +1000</td>
+                    <td>adding timbre</td>
+                    <td>adding timbre to drum and sound</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 16:08:55 2026 +1000</td>
+                    <td>add headphone line</td>
+                    <td></td>
+
+                </tr>
+
+                </tbody>
+
+            </table>
+        </details>
+
+
+        <h4><a href="https://yulia-mappingtest2.github.io/Yuliamappingtest2/">Prototype 2: drum and sound triggered together</a></h4>
+        <p>
+            In the second prototype, I experimented with triggering both the musical sound and drum sound only when the falling icon reaches the ground. Unlike the immediate feedback in the first prototype, users first see the falling animation, while the sound is produced when the icon lands. The main purpose of this prototype is to explore how users respond to delayed feedback and whether this less immediate mapping is still easy to understand. I also want to test how triggering the drum and musical sound together on landing affects the overall musical and playing experience.
+        </p>
+
+        <details>
+            <summary>commit log for mappingTest2</summary>
+            <table>
+
+                <thead><tr>
+
+                    <th>Author</th>
+                    <th>Date</th>
+                    <th>Subject</th>
+                    <th>Body</th>
+
+                </tr></thead>
+
+                <tbody>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Jul 29 15:17:33 2026 +1000</td>
+                    <td> adding the first button</td>
+                    <td>create new html, css and javascript document. Import Tone.js,  add function to play a note and link it to the sound check button</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 14:49:34 2026 +1000</td>
+                    <td>add a modal and button</td>
+                    <td>add a modal and button at the start of website</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 14:56:32 2026 +1000</td>
+                    <td>run toneInit</td>
+                    <td>add a function called toneInit,  to run it after dialog closed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 15:55:33 2026 +1000</td>
+                    <td>we added design system css</td>
+                    <td>set up some variables for color and applied style to dialog box</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Thu Aug 13 13:53:53 2026 +1000</td>
+                    <td>change color</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 16:34:33 2026 +1000</td>
+                    <td>divide the sections and add container</td>
+                    <td>I add weather container and drum container to the page.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 17:30:50 2026 +1000</td>
+                    <td>add id to all sections</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 19:29:17 2026 +1000</td>
+                    <td>bind click events to these sections</td>
+                    <td>I bound click events to some sample notes to these sections</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 14:00:31 2026 +1000</td>
+                    <td>add click events</td>
+                    <td>I add basic click events to sections</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 15:20:46 2026 +1000</td>
+                    <td>add emoji visual effects</td>
+                    <td>I add some basic emoji falling animation to each event listener.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 15:40:05 2026 +1000</td>
+                    <td>random pitch and drum setting</td>
+                    <td>I add random pitch to each section and add drum sound after animation end to pretend it crashed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 12:00:29 2026 +1000</td>
+                    <td>add some animation for hitting drum</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:24:09 2026 +1000</td>
+                    <td>test branch change</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:30:32 2026 +1000</td>
+                    <td>change note length</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:47:23 2026 +1000</td>
+                    <td>only add oscillator</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 16:35:38 2026 +1000</td>
+                    <td>adding position to drum section</td>
+                    <td>preparing for the implementation of emoji in drum area</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 16:37:58 2026 +1000</td>
+                    <td>adding emoji to drum</td>
+                    <td>I add emoji to drum and cancel the part of playing drum sound after animation ends</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 16:39:00 2026 +1000</td>
+                    <td>change the drum timbre</td>
+                    <td>I added a drum synth but forgot to use it.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 16:55:58 2026 +1000</td>
+                    <td>enable the drum</td>
+                    <td>adding a emoji feedback while the drum sound is triggered</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 16:59:38 2026 +1000</td>
+                    <td>delete the emoji</td>
+                    <td>the emoji causes some problems and I think the color feedback is enough</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 17:05:05 2026 +1000</td>
+                    <td>cancel triggerAttackRelease in click events</td>
+                    <td>I cancel the triggerAttackRelease in sun,  rain,  thunder,  and wind click events</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 17:10:25 2026 +1000</td>
+                    <td>add notes and duration parameter to falling emoji function</td>
+                    <td>I integrate the note-playing code into falling emoji function so that they can be triggered together</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 17:13:30 2026 +1000</td>
+                    <td>implement the new creating emoji function</td>
+                    <td>I transferred  corresponding parameters to the event listeners.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 15:53:15 2026 +1000</td>
+                    <td>adjust timbre</td>
+                    <td>using "sine" oscillator makes the thunder section no sound</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 16:09:39 2026 +1000</td>
+                    <td>add headphone line</td>
+                    <td></td>
+
+                </tr>
+
+                </tbody>
+
+            </table>
+        </details>
+
+        <h4><a href="https://yulia-mappingtest3.github.io/Yuliamappingtest3/">Prototype 3: sound triggered immediately while drum is delayed</a></h4>
+        <p>In the third prototype, the musical sound and drum sound are mapped to different stages of the interaction. The musical sound is triggered immediately when the user clicks, while the drum sound is triggered only when the emoji reaches the ground. This prototype combines both immediate and delayed feedback. Through this prototype, I want to test whether combining these two types of mapping is still easy for users to understand, and how separating the musical sound and percussion in time affects the overall playing experience. I also want to explore how users respond to this form of partial control, where they can directly control the musical sound while the percussion is determined by the falling animation.</p>
+
+        <details>
+            <summary>
+                commit log for mappingTest3
+            </summary>
+            <table>
+
+                <thead><tr>
+
+                    <th>Author</th>
+                    <th>Date</th>
+                    <th>Subject</th>
+                    <th>Body</th>
+
+                </tr></thead>
+
+                <tbody>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Jul 29 15:17:33 2026 +1000</td>
+                    <td> adding the first button</td>
+                    <td>create new html, css and javascript document. Import Tone.js,  add function to play a note and link it to the sound check button</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 14:49:34 2026 +1000</td>
+                    <td>add a modal and button</td>
+                    <td>add a modal and button at the start of website</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 14:56:32 2026 +1000</td>
+                    <td>run toneInit</td>
+                    <td>add a function called toneInit,  to run it after dialog closed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Wed Aug 12 15:55:33 2026 +1000</td>
+                    <td>we added design system css</td>
+                    <td>set up some variables for color and applied style to dialog box</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Thu Aug 13 13:53:53 2026 +1000</td>
+                    <td>change color</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 16:34:33 2026 +1000</td>
+                    <td>divide the sections and add container</td>
+                    <td>I add weather container and drum container to the page.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 17:30:50 2026 +1000</td>
+                    <td>add id to all sections</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sat Aug 15 19:29:17 2026 +1000</td>
+                    <td>bind click events to these sections</td>
+                    <td>I bound click events to some sample notes to these sections</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 14:00:31 2026 +1000</td>
+                    <td>add click events</td>
+                    <td>I add basic click events to sections</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 15:20:46 2026 +1000</td>
+                    <td>add emoji visual effects</td>
+                    <td>I add some basic emoji falling animation to each event listener.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Sun Aug 16 15:40:05 2026 +1000</td>
+                    <td>random pitch and drum setting</td>
+                    <td>I add random pitch to each section and add drum sound after animation end to pretend it crashed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 12:00:29 2026 +1000</td>
+                    <td>add some animation for hitting drum</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:24:09 2026 +1000</td>
+                    <td>test branch change</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:30:32 2026 +1000</td>
+                    <td>change note length</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Aug 24 17:47:23 2026 +1000</td>
+                    <td>only add oscillator</td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 16:35:38 2026 +1000</td>
+                    <td>adding position to drum section</td>
+                    <td>preparing for the implementation of emoji in drum area</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 16:37:58 2026 +1000</td>
+                    <td>adding emoji to drum</td>
+                    <td>I add emoji to drum and cancel the part of playing drum sound after animation ends</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 16:39:00 2026 +1000</td>
+                    <td>change the drum timbre</td>
+                    <td>I added a drum synth but forgot to use it.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 16:55:58 2026 +1000</td>
+                    <td>enable the drum</td>
+                    <td>adding a emoji feedback while the drum sound is triggered</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 16:59:38 2026 +1000</td>
+                    <td>delete the emoji</td>
+                    <td>the emoji causes some problems and I think the color feedback is enough</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 17:05:05 2026 +1000</td>
+                    <td>cancel triggerAttackRelease in click events</td>
+                    <td>I cancel the triggerAttackRelease in sun,  rain,  thunder,  and wind click events</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 17:10:25 2026 +1000</td>
+                    <td>add notes and duration parameter to falling emoji function</td>
+                    <td>I integrate the note-playing code into falling emoji function so that they can be triggered together</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 17:13:30 2026 +1000</td>
+                    <td>implement the new creating emoji function</td>
+                    <td>I transferred  corresponding parameters to the event listeners.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Mon Sep 14 17:18:46 2026 +1000</td>
+                    <td>change backwards to the version where the sounds are triggered seperately</td>
+                    <td>I forgot to create new branch...so this version goes back to the version where each sections has its own triggerAttackRelease</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 15:56:32 2026 +1000</td>
+                    <td>adjust drum sound</td>
+                    <td>adjusting the drum and timbre</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>yuliax000</td>
+                    <td>Tue Sep 15 16:10:33 2026 +1000</td>
+                    <td>adding headphone line</td>
+                    <td></td>
+
+                </tr>
+
+                </tbody>
+
+            </table>
+        </details>
+
+
+
+        
+
+
+      <p></p>
+
+
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+</body>
+</html>
