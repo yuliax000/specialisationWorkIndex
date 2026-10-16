@@ -83,6 +83,10 @@ footer {
     display: flex;
     justify-content: center;
     margin-block-start: 3rem;
+    padding: 1rem;
+
+    align-items: center;
+    flex-direction: column;
 }
 
 /*technique from Kevin Powell*/
