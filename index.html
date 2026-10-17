@@ -275,11 +275,1032 @@
                     </p>
                 </section>
 
+                <section id="audio-mapping">
+                    <h3>Audio Mapping &amp; Percussion</h3>
+
+                    <p>
+                        When users click a weather icon or press a corresponding
+                        keyboard key, a musical note is triggered immediately.
+                        When the falling icon reaches the ground, it triggers
+                        a percussion sound. Both sounds are implemented using
+                        Tone.js, and multiple notes can play simultaneously to
+                        create layered musical combinations.
+                    </p>
+
+                    <p>
+                        This interaction combines immediate and delayed feedback.
+                        Based on the mapping tests conducted in Assignment 2,
+                        I found that fully delayed feedback could make users feel
+                        uncomfortable or frustrated, while purely immediate
+                        feedback could make the experience less engaging.
+                        To balance these two approaches, I adopted the original
+                        proposal's design: immediate musical notes combined with
+                        landing-triggered percussion. Together with visual
+                        feedback, this mapping makes the relationship between
+                        actions and sounds easier to understand.
+                    </p>
+
+                    <p>
+                        The unpredictable timing of the percussion also adds
+                        playfulness to the instrument. I believe a certain degree
+                        of unpredictability can encourage exploration, as users
+                        may try to anticipate or influence the rhythm by adjusting
+                        when they trigger musical notes. This creates interesting
+                        interactions between user control and naturally emerging
+                        musical patterns.
+                    </p>
+
+                    <img src="./assets/flowchart.png" alt="flowChart">
+                </section>
 
 
+                <section id="sound-generation">
+                    <h3>Sound Generation &amp; Harmony</h3>
+
+                    <p>
+                        In Assignment 2, I tested how different timbres affected
+                        the overall experience of the instrument. Surprisingly,
+                        most participants preferred the simple default sound
+                        that I originally used as a baseline. This suggested
+                        that even a simple timbre could provide an enjoyable
+                        musical experience.
+                    </p>
+
+                    <p>
+                        When asked about their preferred instrument, most
+                        participants chose the piano, so I experimented with
+                        piano samples as the main timbre. The testing also showed
+                        that most participants preferred building their own
+                        harmonies rather than triggering pre-made chords, as some
+                        found the chord-based sounds too noisy or overwhelming.
+                        Compared with the original default timbre, the piano
+                        samples made the harmonies created by overlapping notes
+                        more noticeable. Therefore, I ultimately selected a
+                        sampled piano sound as the main timbre.
+                    </p>
+
+                    <p>
+                        In addition, I limited the range of randomly generated
+                        notes to reduce dissonance, allowing toddlers without
+                        musical experience to produce pleasant sounds. By layering
+                        individual notes, users can create a variety of musical
+                        combinations, with each interaction contributing to an
+                        unpredictable musical outcome. I believe this approach
+                        can reduce the repetitiveness of continuous interaction
+                        and encourage children to keep experimenting and exploring
+                        different sound combinations.
+                    </p>
+                    <img src="./assets/random-notes.png" alt="randomNotes">
+                </section>
+
+                <section id="volume-playback-controls">
+                    <h3>Volume &amp; Playback Controls</h3>
+
+                    <p>
+                        Users can adjust the overall volume using a slider,
+                        replay their previous performance, stop playback,
+                        or clear the recorded performance.
+                    </p>
+
+                    <p>
+                        Considering that the target audience is toddlers with
+                        limited reading skills, I used icon-based controls to
+                        reduce reliance on written instructions. A hand icon
+                        below the volume slider indicates that it can be dragged,
+                        encouraging children to discover these functions through
+                        visual guidance and exploration.
+                    </p>
+
+                    <p>
+                        I added the replay function to balance the unpredictability
+                        introduced by random note generation. Although users cannot
+                        directly control the pitch of each note, replay allows
+                        them to listen to the same musical sequence again.
+                        This transforms unpredictable outcomes into repeatable
+                        experiences, giving users a greater sense of control
+                        over their creations.
+                    </p>
+
+                    <p>
+                        Rather than reducing randomness itself, replay allows
+                        users to revisit and enjoy their musical combinations,
+                        supporting the project's focus on open-ended exploration.
+                    </p>
+                </section>
+
+                <section id="onboarding-visual-guidance">
+                    <h3>Onboarding &amp; Visual Guidance</h3>
+
+                    <p>
+                        When users enter the website, three short introductory
+                        dialogs guide them through the interaction process using
+                        simple text and illustrations. I used playful,
+                        easy-to-understand sentences to minimise complex
+                        instructions and make the experience more accessible
+                        to toddlers.
+                    </p>
+
+                    <p>
+                        I also added subtle animations to each weather icon
+                        based on its natural characteristics, helping indicate
+                        that the icons are interactive. I wanted users to learn
+                        how to use the website through exploration rather than
+                        detailed instructions. Additional visual feedback on
+                        hover and click reinforces their actions and encourages
+                        further interaction.
+                    </p>
+                </section>
+
+                <section id="extended-technique">
+                    <h2>Extended Technique — Randomness</h2>
+
+                    <p>
+                        Randomness is applied to three aspects of the instrument:
+                        pitch selection, landing position and
+                            percussion generation.
+                    </p>
+                    
+
+                    <p>
+                        Instead of allowing users to select specific pitches,
+                        JavaScript uses <code>Math.random()</code> to select notes
+                        from predefined arrays. Each weather element has its own
+                        pitch range, giving it a distinct musical character.
+                    </p>
+
+                    <p>
+                        I limited the available notes to reduce dissonance while
+                        maintaining variation. This allows children to explore
+                        music without understanding musical scales or worrying
+                        about playing incorrect notes. Each interaction produces
+                        a different result, encouraging repeated experimentation.
+                    </p>
+                    <img src="./assets/random-pitch-code.png" alt="randomPitchCode">
 
 
+                    <p>
+                        Randomness is also applied to the falling animations.
+                        Each weather icon appears at a random horizontal position
+                        across the screen rather than being restricted to its
+                        corresponding weather section.
+                    </p>
 
+                    <p>
+                        I made this change because weather does not naturally
+                        occur within fixed boundaries. Random positioning makes
+                        the visual experience feel more natural and less repetitive,
+                        introducing additional unpredictability into the interaction.
+                    </p>
+                    <img src="./assets/random-position-code.png" alt="randomPositionCode">
+
+
+                    <p>
+                        When a falling icon reaches the ground, the system randomly
+                        selects between different drum sounds. Combined with
+                        landing-triggered feedback, this creates variations in
+                        the resulting rhythm.
+                    </p>
+
+                    <p>
+                        Users can control when weather elements are generated,
+                        but the timing and character of the percussion are partly
+                        determined by the falling animation and random sound
+                        selection. This balance between direct control and
+                        unpredictability supports the project's focus on playful,
+                        open-ended exploration.
+                    </p>
+                    <img src="./assets/random-drum-code.png" alt="randomeDrumCode">
+                </section>
+
+
+                <section id="design-system">
+                    <h2>Design System</h2>
+
+                    <section id="layout">
+                        <h3>Layout</h3>
+
+                        <p>
+                            The four weather icons are arranged horizontally with
+                            equal spacing, presenting them as equally important
+                            interaction points. The sky occupies most of the screen,
+                            providing space for falling animations, while the grass
+                            at the bottom serves as a shared landing area.
+                        </p>
+
+                        <p>
+                            The control buttons are grouped together and separated
+                            from the main playing area to communicate their related
+                            functions without interrupting the musical interaction.
+                            I kept the overall layout minimal to reduce visual
+                            distractions and establish a clear visual hierarchy,
+                            allowing children to focus on exploring the weather elements.
+                        </p>
+                    </section>
+
+                    <section id="typography">
+                        <h3>Typography</h3>
+
+                        <p>
+                            I chose Comic Relief as the main typeface because of its
+                            rounded, informal and playful appearance, which matches
+                            the friendly character of the instrument. Text is kept
+                            minimal and simple to accommodate toddlers with limited
+                            reading skills.
+                        </p>
+                    </section>
+
+                    <section id="colour-visual-language">
+                        <h3>Colour &amp; Visual Language</h3>
+
+                        <p>
+                            The visual design uses bright but relatively soft colours
+                            to create a friendly and playful atmosphere. Blue and green
+                            are used for the sky and grass, establishing a recognisable
+                            natural environment. The backgrounds are implemented using
+                            SVG assets to maintain visual quality across different
+                            screen sizes.
+                        </p>
+
+                        <p>
+                            The weather icons use simple, cartoon-like shapes and clear
+                            silhouettes to make them easy to recognise. A consistent
+                            visual style helps children identify interactive elements
+                            without relying on written instructions.
+                        </p>
+                    </section>
+
+                    <section id="motion-feedback">
+                        <h3>Motion &amp; Feedback</h3>
+
+                        <p>
+                            CSS animations play an important role in the design system.
+                            Each weather icon has its own idle animation to suggest
+                            interactivity, while falling and landing animations connect
+                            visual movement with musical rhythm. Hover and click
+                            feedback confirm user actions.
+                        </p>
+
+                        <p>
+                            By maintaining consistent feedback patterns while giving
+                            each weather element a distinct movement, the design
+                            balances clarity with playfulness.
+                        </p>
+                    </section>
+
+                    <section id="accessibility">
+                        <h3>Accessibility</h3>
+
+                        <p>
+                            The interface uses minimal text, recognisable icons and
+                            simple interactions to reduce the need for prior digital
+                            experience or reading skills.
+                        </p>
+
+                        <p>
+                            Both mouse and keyboard inputs provide different ways to
+                            explore the instrument, while visual and auditory feedback
+                            help users understand the outcomes of their actions.
+                            These design decisions aim to create an approachable and
+                            low-pressure experience for young children.
+                        </p>
+                    </section>
+
+                    <section id="dark-mode">
+                        <h3>Dark Mode</h3>
+
+                        <p>
+                            To maintain consistency with the weather theme, I chose
+                            not to transform the environment into a completely dark
+                            night scene, as the sun remains part of the instrument.
+                            Instead, dark mode preserves the original colours while
+                            reducing brightness and saturation to create a softer
+                            visual experience with less intense contrast.
+                        </p>
+
+                        <p>
+                            This approach maintains the recognisable weather
+                            environment and playful visual identity while aiming
+                            to make the interface more comfortable to view in
+                            darker surroundings.
+                        </p>
+                    </section>
+                </section>
+
+            <section id="git-commit-log">
+                <h2>Git commit log</h2>
+                <details>
+
+                    <table>
+
+                        <thead><tr>
+
+                            <th>Author</th>
+                            <th>Date</th>
+                            <th>Subject</th>
+                            <th>Body</th>
+
+                        </tr></thead>
+
+                        <tbody>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Jul 29 15:17:33 2026 +1000</td>
+                            <td> adding the first button</td>
+                            <td>create new html, css and javascript document. Import Tone.js,  add function to play a note and link it to the sound check button</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Aug 12 14:49:34 2026 +1000</td>
+                            <td>add a modal and button</td>
+                            <td>add a modal and button at the start of website</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Aug 12 14:56:32 2026 +1000</td>
+                            <td>run toneInit</td>
+                            <td>add a function called toneInit,  to run it after dialog closed</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Aug 12 15:55:33 2026 +1000</td>
+                            <td>we added design system css</td>
+                            <td>set up some variables for color and applied style to dialog box</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Thu Aug 13 13:53:53 2026 +1000</td>
+                            <td>change color</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sat Aug 15 16:34:33 2026 +1000</td>
+                            <td>divide the sections and add container</td>
+                            <td>I add weather container and drum container to the page.</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sat Aug 15 17:30:50 2026 +1000</td>
+                            <td>add id to all sections</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sat Aug 15 19:29:17 2026 +1000</td>
+                            <td>bind click events to these sections</td>
+                            <td>I bound click events to some sample notes to these sections</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sun Aug 16 14:00:31 2026 +1000</td>
+                            <td>add click events</td>
+                            <td>I add basic click events to sections</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sun Aug 16 15:20:46 2026 +1000</td>
+                            <td>add emoji visual effects</td>
+                            <td>I add some basic emoji falling animation to each event listener.</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sun Aug 16 15:40:05 2026 +1000</td>
+                            <td>random pitch and drum setting</td>
+                            <td>I add random pitch to each section and add drum sound after animation end to pretend it crashed</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Mon Aug 24 12:00:29 2026 +1000</td>
+                            <td>add some animation for hitting drum</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Mon Aug 24 17:24:09 2026 +1000</td>
+                            <td>test branch change</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Mon Aug 24 17:24:57 2026 +1000</td>
+                            <td>adding text to Sun</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Mon Aug 24 17:30:32 2026 +1000</td>
+                            <td>change note length</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Mon Aug 24 17:47:23 2026 +1000</td>
+                            <td>only add oscillator</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Mon Aug 24 17:56:35 2026 +1000</td>
+                            <td>temporarily save the version with reverb</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Tue Sep 15 15:49:12 2026 +1000</td>
+                            <td>adjust drum sound</td>
+                            <td>I adjust the drum sound</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Tue Sep 15 16:05:14 2026 +1000</td>
+                            <td>wear headphones</td>
+                            <td>I add "Please wear headphones for the best experience" to intro</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Tue Sep 15 16:26:33 2026 +1000</td>
+                            <td>change icon</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Tue Sep 15 21:03:58 2026 +1000</td>
+                            <td>change thunder timbre</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Tue Sep 15 21:15:44 2026 +1000</td>
+                            <td>commit_history output</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Sep 23 15:15:55 2026 +1000</td>
+                            <td>add the audio slider to html and css</td>
+                            <td>I added a audio slider to html and css file. Haven't connected to the real function</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Sep 23 15:18:02 2026 +1000</td>
+                            <td>adjusting the layout</td>
+                            <td>I find that the page can be scrolled down while I don't want that. As a result I change the css of main container</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Sep 23 15:25:25 2026 +1000</td>
+                            <td>adding style to slider</td>
+                            <td>I add some customized style to the slider</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Sep 23 15:34:51 2026 +1000</td>
+                            <td>change emoji hand to picture</td>
+                            <td>I change the emoji hand,  which is underneath the slider,  to picture</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Thu Sep 24 16:46:54 2026 +1000</td>
+                            <td>dark mode</td>
+                            <td>I implemented the dark mode because I find the borders are invisible in dark mode</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Thu Sep 24 17:28:29 2026 +1000</td>
+                            <td>commit history</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Thu Sep 24 18:19:29 2026 +1000</td>
+                            <td>adding comments</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Tue Oct 6 20:26:00 2026 +1100</td>
+                            <td>adding hand icon</td>
+                            <td>I added a hand icon to indicates the volume slider</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Tue Oct 6 20:57:13 2026 +1100</td>
+                            <td>replace the emoji to image</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Oct 7 13:35:12 2026 +1100</td>
+                            <td>adjusting the position of icons</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Oct 7 13:55:13 2026 +1100</td>
+                            <td>Merge branch 'soundTest1'</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Oct 7 13:57:35 2026 +1100</td>
+                            <td>Update main.js</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Oct 7 14:06:33 2026 +1100</td>
+                            <td>resolve the problem caused by accidentally merge</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Oct 7 14:14:01 2026 +1100</td>
+                            <td>adding grass pop up function in js</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Oct 7 14:21:14 2026 +1100</td>
+                            <td>adding visual to the drum land</td>
+                            <td>I let the grass randomly generated in the drum land,  but it feels not that match...It might need more consideration</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Oct 7 14:55:47 2026 +1100</td>
+                            <td>change the falling logic</td>
+                            <td>adding function to allow icons falling from sky and grass appears in the corresponding position</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Oct 7 15:02:30 2026 +1100</td>
+                            <td>adding style to the grass</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Oct 7 15:17:29 2026 +1100</td>
+                            <td>delete the border</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Oct 7 15:26:39 2026 +1100</td>
+                            <td>trying to draw background in css</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Thu Oct 8 14:48:09 2026 +1100</td>
+                            <td>adding background svg</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Thu Oct 8 15:22:29 2026 +1100</td>
+                            <td>night mode</td>
+                            <td>I adjust the appearance of night mode</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Thu Oct 8 16:05:43 2026 +1100</td>
+                            <td>adding effects to sun icon</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Thu Oct 8 16:13:55 2026 +1100</td>
+                            <td>adding rain animation and effects</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Thu Oct 8 16:24:07 2026 +1100</td>
+                            <td>thunder effects</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sat Oct 10 21:35:52 2026 +1100</td>
+                            <td>adjusting wind animation and sun animation</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sat Oct 10 21:45:11 2026 +1100</td>
+                            <td>adjusting sound effects</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sat Oct 10 21:53:18 2026 +1100</td>
+                            <td>use piano sampler.</td>
+                            <td>I shift to Tone.Sampler to implement more piano effects</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sun Oct 11 16:18:20 2026 +1100</td>
+                            <td>adjust drum notes</td>
+                            <td>low notes to higher notes</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sun Oct 11 16:24:26 2026 +1100</td>
+                            <td>choose among 3 versions drum synth</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sun Oct 11 16:30:20 2026 +1100</td>
+                            <td>adding class to falling weather icons</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sun Oct 11 16:36:17 2026 +1100</td>
+                            <td>adding sun falling animation</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sun Oct 11 16:42:08 2026 +1100</td>
+                            <td>adding rain animation</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sun Oct 11 20:03:44 2026 +1100</td>
+                            <td>thunder animation</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sun Oct 11 20:15:21 2026 +1100</td>
+                            <td>wind animation</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sun Oct 11 20:22:37 2026 +1100</td>
+                            <td>adjust new drum synth</td>
+                            <td>I add a group of new synth to provide the drum sound. The next step is to mix the two drum sound randomly</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sun Oct 11 20:31:36 2026 +1100</td>
+                            <td>mix the two drum synth</td>
+                            <td>let them randomly appear</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sun Oct 11 21:38:52 2026 +1100</td>
+                            <td>adding replay function</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Mon Oct 12 15:16:03 2026 +1100</td>
+                            <td>adding replay/stop/clear button to the html</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Mon Oct 12 19:34:22 2026 +1100</td>
+                            <td>upload img for buttons</td>
+                            <td>adding assets and adjust the layout of buttons</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Mon Oct 12 19:38:52 2026 +1100</td>
+                            <td>adding stop replay function</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Mon Oct 12 19:41:47 2026 +1100</td>
+                            <td>adding clear function and stop function</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Mon Oct 12 19:45:03 2026 +1100</td>
+                            <td>fix bugs</td>
+                            <td>fix bugs of the replay fucntion</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Mon Oct 12 19:50:17 2026 +1100</td>
+                            <td>icons feedback and dark mode</td>
+                            <td>adding icons feedback and suit the dark mode</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Mon Oct 12 19:59:43 2026 +1100</td>
+                            <td>adding dark mode to thunder</td>
+                            <td>adding dark mode to thunder and slider</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Mon Oct 12 20:31:53 2026 +1100</td>
+                            <td>bonding keyboard with weather</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Mon Oct 12 20:53:26 2026 +1100</td>
+                            <td>adding keyboard feedback</td>
+                            <td>I add keyboard feedback and edit css to let the falling icons disappearing position become lower</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Oct 14 15:18:13 2026 +1100</td>
+                            <td>adding comments about dialog structure</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Wed Oct 14 23:59:41 2026 +1100</td>
+                            <td>adding functional intro..no style</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Thu Oct 15 16:51:13 2026 +1100</td>
+                            <td>adding skip button to the introdialog</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Thu Oct 15 17:39:51 2026 +1100</td>
+                            <td>adding style to dialog..</td>
+                            <td>I adjust the information and style of the dialog</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Thu Oct 15 17:44:26 2026 +1100</td>
+                            <td>adjusting the skip button's position</td>
+                            <td>move to top-right corner</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Thu Oct 15 17:55:29 2026 +1100</td>
+                            <td>edit button and style of instruction</td>
+                            <td>characterizing instruction dialog</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Fri Oct 16 16:54:14 2026 +1100</td>
+                            <td>adding help button and code comments</td>
+                            <td>adding help button navigating users to the intro page. and adding some code comments.</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Fri Oct 16 20:10:50 2026 +1100</td>
+                            <td>update icon</td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>yuliax000</td>
+                            <td>Sat Oct 17 16:31:44 2026 +1100</td>
+                            <td>csv</td>
+                            <td></td>
+
+                        </tr>
+
+                        </tbody>
+
+                    </table>
+                </details>
+            </section>
 
 
 
